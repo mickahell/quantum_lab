@@ -14,9 +14,9 @@ RUN pip3 install numpy \
 && pip3 install matplotlib \
 && pip3 install notebook
 
-RUN /build/${script}
+RUN build/${script}
 
-ADD . /data
+ADD data/* /data
 WORKDIR /data
 
 VOLUME /data
