@@ -1,5 +1,5 @@
 #!/bin/bash
 
-pip install pennylane
-pip install pennylane-sf pennylane-qiskit
-pip install autograd
+pip3 install pennylane
+pip3 install pennylane-sf pennylane-qiskit
+pip3 install autograd
