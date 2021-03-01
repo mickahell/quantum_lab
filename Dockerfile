@@ -10,7 +10,8 @@ RUN apt-get update -yq \
 
 RUN pip install numpy \
 && pip install networkx \
-&& pip install matplotlib
+&& pip install matplotlib \
+&& pip install notebook
 
 RUN script
 
