@@ -5,8 +5,8 @@ ARG script=qml.sh
 #ARG script=qiskit.sh
 
 RUN apt-get update -yq \
-&& apt-get install python3.8 \
-&& apt-get install python3-pip \
+&& apt-get install python3.8 -y \
+&& apt-get install python3-pip -y \
 && apt-get clean -y
 
 RUN pip install numpy \
