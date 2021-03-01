@@ -15,11 +15,11 @@ RUN pip3 install numpy \
 && pip3 install notebook
 
 ADD build/* /build/
+ADD data/* /data/
+
 RUN /build/${script}
 
-ADD data/* /data/
 WORKDIR /data
-
 VOLUME /data
 
 CMD /bin/bash
