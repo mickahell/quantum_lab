@@ -5,7 +5,7 @@ To start the image, run the following command line :
 `docker build -t quantum_lab .`
 
 ### Environment
-- 2 lib setup are available, one for installating pennylane and the other one for using qiskit
+- 2 lib setup are available, one for installating [PennyLane](pennylane.ai) and the other one for using [Qiskit](qiskit.org)
   - `qml.sh`
   - `qiskit.sh`
 
