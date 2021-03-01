@@ -16,6 +16,9 @@ RUN pip install numpy \
 
 RUN /build/${script}
 
+ADD . /data
+WORKDIR /app
+
 VOLUME /data
 
 CMD /bin/bash
