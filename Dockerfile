@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 
+# Choose your quantum env
 script=qml.sh
 #script=qiskit.sh
 
