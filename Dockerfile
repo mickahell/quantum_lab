@@ -14,7 +14,7 @@ RUN pip install numpy \
 && pip install matplotlib \
 && pip install notebook
 
-RUN script
+RUN /build/${script}
 
 VOLUME /data
 
