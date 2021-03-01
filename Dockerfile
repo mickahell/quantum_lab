@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
 
 # Choose your quantum env
-script=qml.sh
-#script=qiskit.sh
+ARG script=qml.sh
+#ARG script=qiskit.sh
 
 RUN apt-get update -yq \
 && apt-get install python3.8 \
