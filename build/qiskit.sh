@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pip install qiskit
-pip install qiskit[visualization]
+pip3 install qiskit
+pip3 install qiskit[visualization]
