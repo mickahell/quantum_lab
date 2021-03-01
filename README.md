@@ -1,4 +1,5 @@
 # Quantum Lab
+[![Docker Image CI](https://github.com/mickahell/quantum_lab/actions/workflows/docker-image.yml/badge.svg)](https://github.com/mickahell/quantum_lab/actions/workflows/docker-image.yml)
 
 ## Prerequisites
 - <details><summary>Linux</summary>
