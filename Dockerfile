@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 # Choose your quantum env
 #ARG quantum_env=qiskit.sh
-ARG quantum_env=qml_requirements.txt
+ARG quantum_env=qml.sh
 
 RUN apt-get update -yq \
 && apt-get install python3.8 -y \
@@ -14,7 +14,7 @@ ADD build/* /build/
 ADD data/* /data/
 
 RUN pip3 install -r /build/requirements.txt
-RUN pip3 install -r /build/${quantum_env}
+RUN /build/${quantum_env}
 
 WORKDIR /data
 VOLUME /data
