@@ -14,7 +14,7 @@ RUN pip3 install numpy \
 && pip3 install matplotlib \
 && pip3 install notebook \
 && pip3 install pandas \
-&& pip3 install qutip
+&& pip3 install scipy
 
 ADD build/* /build/
 ADD data/* /data/
