@@ -7,7 +7,7 @@ ARG quantum_env=qml.sh
 RUN apt-get update -yq \
 && apt-get install python3.8 -y \
 && apt-get install python3-pip -y \
-&& apt-get install git-all -y \
+&& apt-get install git -y \
 && apt-get clean -y
 
 RUN pip3 install numpy \
