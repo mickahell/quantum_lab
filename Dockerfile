@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
 
 # Choose your quantum env
-ARG script=qml.sh
-#ARG script=qiskit.sh
+ARG quantum_env=qml.sh
+#ARG quantum_env=qiskit.sh
 
 RUN apt-get update -yq \
 && apt-get install python3.8 -y \
@@ -19,7 +19,7 @@ RUN pip3 install numpy \
 ADD build/* /build/
 ADD data/* /data/
 
-RUN /build/${script}
+RUN /build/${quantum_env}
 
 WORKDIR /data
 VOLUME /data
