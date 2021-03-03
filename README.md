@@ -12,7 +12,7 @@
 
 ## Details
 - The image is base on Ubuntu [Bionic](https://doc.ubuntu-fr.org/bionic) (Will be updated to next LTS)
-- Python version install : 3.8
+- Python version install : [3.8](https://www.python.org/downloads/release/python-383/)
 
 ## Starting the image
 To start the image, run the following command line :
