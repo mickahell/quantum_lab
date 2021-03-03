@@ -1,4 +1,0 @@
-pennylane
-pennylane-sf
-pennylane-qiskit
-autograd
