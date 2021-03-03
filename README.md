@@ -16,7 +16,7 @@ To start the image, run the following command line :
 
 ### Environment
 - Python version 3.8
-- Libs common for every env : ```networkx, numpy, matplotlib, notebook```
+- Libs common for every env : ```networkx, numpy, matplotlib, notebook, qutip```
 - 2 lib setup are available, one for installating [PennyLane](https://pennylane.ai) and the other one for using [Qiskit](https://qiskit.org)
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
