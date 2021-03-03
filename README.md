@@ -10,12 +10,15 @@
   https://www.docker.com/products/docker-desktop
 </details>
 
+## Details
+- The image is base on Ubuntu [Bionic](https://doc.ubuntu-fr.org/bionic) (Will be updated to next LTS)
+- Python version install : 3.8
+
 ## Starting the image
 To start the image, run the following command line :
 `docker build -t quantum_lab .`
 
 ### Environment
-- Python version 3.8
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, qutip```
 - 2 lib setup are available, one for installating [PennyLane](https://pennylane.ai) and the other one for using [Qiskit](https://qiskit.org)
   - `qml.sh`
