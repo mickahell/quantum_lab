@@ -19,7 +19,7 @@ To start the image, run the following command line :
 `docker build -t quantum_lab .`
 
 ### Environment
-- Libs common for every env : ```networkx, numpy, matplotlib, notebook, qutip```
+- Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy```
 - 2 lib setup are available, one for installating [PennyLane](https://pennylane.ai) and the other one for using [Qiskit](https://qiskit.org)
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
