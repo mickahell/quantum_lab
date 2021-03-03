@@ -4,4 +4,3 @@ matplotlib
 notebook
 pandas
 scipy
-setuptools>=40.1.0
