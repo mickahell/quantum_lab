@@ -4,3 +4,4 @@ matplotlib
 notebook
 pandas
 scipy
+setuptools
