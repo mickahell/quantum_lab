@@ -13,6 +13,7 @@ RUN apt-get update -yq \
 ADD build/* /build/
 ADD data/* /data/
 
+RUN pip3 install --upgrade pip setuptools
 RUN pip3 install -r /build/requirements.txt
 RUN /build/${quantum_env}
 
