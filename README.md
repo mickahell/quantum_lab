@@ -22,7 +22,7 @@
 - See the existed containeur : `docker ps -a`
   - The `-a` is used the see every existed containeurs, that's include the stopped one
 - List the images existed : `docker images`
-- Delete containeur : `docker rm [CONTAINEUR_ID]
+- Delete containeur : `docker rm [CONTAINEUR_ID]`
 - Delete image : `docker rmi [NAME_OF_THE_IMAGE]`
   - You can use `-f` to force the suppression and delete the containeurs associates to the image
 
