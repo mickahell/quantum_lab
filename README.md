@@ -15,8 +15,9 @@
 - Python version install : [3.8](https://www.python.org/downloads/release/python-383/)
 
 ## Starting the image
-To start the image, run the following command line :
-`docker build -t quantum_lab .`
+- To build the image, run the following command line : `docker build -t quantum_lab .`
+- To go inside the image : `docker exec -it -u root quantum_lab /bin/bash`
+- To restart the image : `docker run -it --entrypoint=/bin/bash quantum_lab`
 
 ### Environment
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy```
