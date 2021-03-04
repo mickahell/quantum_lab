@@ -14,10 +14,17 @@
 - The image is base on Ubuntu [Bionic](https://doc.ubuntu-fr.org/bionic) (Will be updated to the next LTS)
 - Python version install : [3.8](https://www.python.org/downloads/release/python-383/)
 
-## Starting the image
-- To build the image, run the following command line : `docker build -t quantum_lab .`
-- To go inside the image : `docker exec -it -u root quantum_lab /bin/bash`
-- To restart the image : `docker run -it --entrypoint=/bin/bash quantum_lab`
+## Getting started & Simple docker commands
+- To build the image and start a containeur, run the following command line : `docker build -t quantum_lab .`
+- To go inside a started containeur : `docker exec -it -u root [CONTAINEUR_ID] /bin/bash`
+- To start a containeur : `docker start [CONTAINEUR_ID]`
+- To create a new containeur : `docker run -it --entrypoint=/bin/bash quantum_lab`
+- See the existed containeur : `docker ps -a`
+  - The `-a` is used the see every existed containeurs, that's include the stopped one
+- List the images existed : `docker images`
+- Delete containeur : `docker rm [CONTAINEUR_ID]
+- Delete image : `docker rmi [NAME_OF_THE_IMAGE]`
+  - You can use `-f` to force the suppression and delete the containeurs associates to the image
 
 ### Environment
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy```
