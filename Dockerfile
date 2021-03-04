@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 # Choose your quantum env
 ARG quantum_env=qiskit.sh
-#ARG quantum_env=qml.sh*
+#ARG quantum_env=qml.sh
 
 # Var for labels
 ARG GITHUB_ACTOR
