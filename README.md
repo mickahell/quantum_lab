@@ -16,10 +16,10 @@
 
 ## Getting started
 - To build the image, run the following command line : `docker build -t quantum_lab .`
-- To create a new containeur and go inside : `docker run -it -v $(pwd)/data:/data --entrypoint=/bin/bash -p 8888:8888 -e LANG=C.UTF-8 quantum_lab`
+- To create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
-- Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy```
+- Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
 - 2 lib setup are available, one for installating [PennyLane](https://pennylane.ai) and the other one for using [Qiskit](https://qiskit.org)
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
