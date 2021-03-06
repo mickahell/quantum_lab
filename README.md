@@ -40,5 +40,7 @@ To use one of this, set the right variable at the beginning of the `Dockerfile`
 The folder `data` is link to the host file and allow to register the modification in the host computer
 
 ### Jupyter
-To launch the Jupyter notebook instance, run `jupyter notebook`
-- http://127.0.0.1:8888/
+To launch the Jupyter notebook instance :
+- be inside the `data`folder
+- run : `./start_jupyter.com`
+- copy and paste this url in your browser : `http://127.0.0.1:8888/`
