@@ -28,6 +28,7 @@ RUN apt-get update -yq \
 && apt-get install python3-pip -y \
 && apt-get install git -y \
 && apt-get install python3-tk -y \
+&& apt-get install vim -y \
 && apt-get clean -y
 
 # Add script & data
