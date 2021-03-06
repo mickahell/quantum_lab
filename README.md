@@ -15,10 +15,10 @@
 - Python version install : [3.8](https://www.python.org/downloads/release/python-383/)
 
 ## Getting started & Simple docker commands
-- To build the image and start a containeur, run the following command line : `docker build -t quantum_lab .`
+- To build the image, run the following command line : `docker build -t quantum_lab .`
+- To create a new containeur and go inside : `docker run -it -v $(pwd)/data:/data --entrypoint=/bin/bash quantum_lab`
 - To go inside a started containeur : `docker exec -it -u root [CONTAINEUR_ID] /bin/bash`
 - To start a containeur : `docker start [CONTAINEUR_ID]`
-- To create a new containeur : `docker run -it --entrypoint=/bin/bash quantum_lab`
 - See the existed containeur : `docker ps -a`
   - The `-a` is used the see every existed containeurs, that's include the stopped one
 - List the images existed : `docker images`
@@ -41,3 +41,4 @@ The folder `data` is link to the host file and allow to register the modificatio
 
 ### Jupyter
 To launch the Jupyter notebook instance, run `jupyter notebook`
+- http://127.0.0.1:8888/
