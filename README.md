@@ -16,7 +16,7 @@
 
 ## Getting started
 - To build the image, run the following command line : `docker build -t quantum_lab .`
-- To create a new containeur and go inside : `docker run -it -v $(pwd)/data:/data --entrypoint=/bin/bash -p 8888:8888 quantum_lab`
+- To create a new containeur and go inside : `docker run -it -v $(pwd)/data:/data --entrypoint=/bin/bash -p 8888:8888 -e LANG=C.UTF-8 quantum_lab`
 
 ### Environment
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy```
