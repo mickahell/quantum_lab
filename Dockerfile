@@ -9,6 +9,9 @@ ARG GITHUB_ACTOR
 ARG GITHUB_REPOSITORY
 ARG GITHUB_REF
 
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Paris
+
 LABEL org.opencontainers.image.title="Quantum Lab" \
       org.opencontainers.image.authors=${GITHUB_ACTOR} \
       org.opencontainers.image.vendor=${GITHUB_REPOSITORY} \
@@ -24,6 +27,7 @@ RUN apt-get update -yq \
 && apt-get install python3.8 -y \
 && apt-get install python3-pip -y \
 && apt-get install git -y \
+&& apt-get install python3-tk -y \
 && apt-get clean -y
 
 # Add script & data
