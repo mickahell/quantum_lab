@@ -16,7 +16,7 @@
 
 ## Getting started & Simple docker commands
 - To build the image, run the following command line : `docker build -t quantum_lab .`
-- To create a new containeur and go inside : `docker run -it -v $(pwd)/data:/data --entrypoint=/bin/bash quantum_lab`
+- To create a new containeur and go inside : `docker run -it -v $(pwd)/data:/data --entrypoint=/bin/bash -p 8888:8888 quantum_lab`
 - To go inside a started containeur : `docker exec -it -u root [CONTAINEUR_ID] /bin/bash`
 - To start a containeur : `docker start [CONTAINEUR_ID]`
 - See the existed containeur : `docker ps -a`
