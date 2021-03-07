@@ -1,5 +1,6 @@
 # Data
 - This folder is sync with your host folder
+- You can work on your host IDE and run your program inside the container
 
 ## Program example
 - Some example of program for each environment are available here :
