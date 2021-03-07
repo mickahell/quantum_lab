@@ -19,4 +19,4 @@ jobs:
     - name: Build the Docker qml
       run: docker build --build-arg quantum_env=qml.sh . --file Dockerfile --tag quantum_lab_qml:main
     - name: Build the Docker q#
-      run: docker build --build-arg quantum_env=qml.sh . --file Dockerfile --tag quantum_lab_qml:main
+      run: docker build --build-arg quantum_env=qsharp.sh . --file Dockerfile --tag quantum_lab_qsharp:main
