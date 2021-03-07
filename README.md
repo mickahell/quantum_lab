@@ -15,8 +15,9 @@
 - Python version install : [3.8](https://www.python.org/downloads/release/python-383/)
 
 ## Getting started
-- To build the image, run the following command line : `docker build -t quantum_lab .`
-- To create a new containeur and go inside, run the script : `./start.sh`
+- Edit the var `quantum_env` at the line [#3 of the Dockerfile](Dockerfile#L3) with the environment you want to setup, by just comment/uncomment the good line
+- Build the image, run the following command line : `docker build -t quantum_lab .`
+- Create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
