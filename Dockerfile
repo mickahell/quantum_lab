@@ -32,15 +32,15 @@ RUN apt-get update -yq \
 && apt-get clean -y
 
 # Add script & data
-ADD build/* /build/
-ADD data/* /data/
+ADD build/* /opt/quantum_lab/build/
+ADD data/* /opt/quantum_lab/data/
 
 # General & env requirements
 RUN pip3 install --upgrade pip setuptools
-RUN pip3 install -r /build/requirements.txt
-RUN /build/${quantum_env}
+RUN pip3 install -r /opt/quantum_lab/build/requirements.txt
+RUN /opt/quantum_lab/build/${quantum_env}
 
-WORKDIR /data
-VOLUME /data
+WORKDIR /opt/quantum_lab/data
+VOLUME /opt/quantum_lab/data
 
 CMD /bin/bash
