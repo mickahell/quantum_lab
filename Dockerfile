@@ -28,7 +28,6 @@ LABEL org.opencontainers.image.title="Quantum Lab" \
 RUN apt-get update -yq \
 && apt-get install python3.8 -y \
 && apt-get install python3-pip -y \
-&& apt-get install git -y \
 && apt-get install python3-tk -y \
 && apt-get install vim -y \
 && apt-get install wget -y \
