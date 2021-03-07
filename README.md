@@ -16,7 +16,8 @@
 
 ## Getting started
 - Edit the var `quantum_env` at the line [#3 of the Dockerfile](Dockerfile#L3) with the environment you want to setup, by just comment/uncomment the good line
-- Build the image, run the following command line : `docker build -t quantum_lab .`
+- Build the image, run the following command line : `docker build --build-arg quantum_env=qiskit.sh -t quantum_lab_${quantum_env} .`
+  - You can replace `qiskit.sh` with the following one `qml.sh`or `qsharp.sh`
 - Create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
