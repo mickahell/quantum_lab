@@ -1,8 +1,9 @@
 FROM ubuntu:18.04
 
 # Choose your quantum env
-ARG quantum_env=qiskit.sh
+#ARG quantum_env=qiskit.sh
 #ARG quantum_env=qml.sh
+ARG quantum_env=qsharp.sh
 
 # Var for labels
 ARG GITHUB_ACTOR
@@ -29,6 +30,7 @@ RUN apt-get update -yq \
 && apt-get install git -y \
 && apt-get install python3-tk -y \
 && apt-get install vim -y \
+&& apt-get install wget -y \
 && apt-get clean -y
 
 # Add script & data
