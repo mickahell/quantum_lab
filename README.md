@@ -26,6 +26,8 @@
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit.sh`
     - Libs : ```qiskit, qiskit[visualization]```
+  - `qsharp.sh`
+    - Libs : ```qsharp, iqsharp```
 
 To use one of this, set the right variable at the beginning of the `Dockerfile`
 
