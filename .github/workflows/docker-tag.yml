@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
+    - name: Set env
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
     - name: Build qiskit and push to Docker Hub
       env:
         DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
       run: |
-        echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
         docker build --build-arg quantum_env=qiskit.sh . --file Dockerfile --tag mickahell/quantum_lab_qiskit:${RELEASE_VERSION}
         docker tag mickahell/quantum_lab_qiskit:${RELEASE_VERSION} mickahell/quantum_lab_qiskit:latest
         docker login --username=mickahell --password=${DOCKERHUB_PASS}
