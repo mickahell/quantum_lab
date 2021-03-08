@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker qiskit
       run: |
         echo "toto : "
-        echo ${{TAG.DOCKERHUB_USERNAME}}
+        echo ${{env.DOCKERHUB_USERNAME}}
         echo ${{DOCKERHUB_USER}}
         docker build --build-arg quantum_env=qiskit.sh . --file Dockerfile --tag quantum_lab_qiskit:main
 
