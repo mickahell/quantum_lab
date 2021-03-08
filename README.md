@@ -20,9 +20,9 @@
 - Python version install : [3.8](https://www.python.org/downloads/release/python-383/)
 
 ## Getting started
-- Build the image, run the following command line : `docker build --build-arg quantum_env=qiskit.sh -t quantum_lab_${quantum_env} .`
+- Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
   - You can replace `qiskit.sh` with the following one `qml.sh`or `qsharp.sh`
-- Create a new containeur and go inside, run the script : `./start.sh`
+- To create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
@@ -33,8 +33,6 @@
     - Libs : ```qiskit, qiskit[visualization]```
   - `qsharp.sh`
     - Libs : ```qsharp, iqsharp```
-
-To use one of this, set the right variable at the beginning of the `Dockerfile`
 
 ### Volume
 The folder `data` is link to the host file and allow to register the modification in the host computer
