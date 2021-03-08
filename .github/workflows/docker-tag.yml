@@ -1,0 +1,52 @@
+name: Docker TAG CI
+
+on:
+  push:
+    tags:        
+      - '*'
+jobs:
+
+  build_qiskit:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set env
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+    - name: Build qiskit and push to Docker Hub
+      env:
+        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
+      run: |
+        docker build --build-arg quantum_env=qiskit.sh . --file Dockerfile --tag mickahell/quantum_lab_qiskit:${RELEASE_VERSION}
+        docker tag mickahell/quantum_lab_qiskit:${RELEASE_VERSION} mickahell/quantum_lab_qiskit:latest
+        docker login --username=mickahell --password=${DOCKERHUB_PASS}
+        docker push mickahell/quantum_lab_qiskit --all-tags
+
+  build_qml:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set env
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+    - name: Build qml and push to Docker Hub
+      env:
+        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
+      run: |
+        docker build --build-arg quantum_env=qml.sh . --file Dockerfile --tag mickahell/quantum_lab_qml:${RELEASE_VERSION}
+        docker tag mickahell/quantum_lab_qml:${RELEASE_VERSION} mickahell/quantum_lab_qml:latest
+        docker login --username=mickahell --password=${DOCKERHUB_PASS}
+        docker push mickahell/quantum_lab_qml --all-tags
+
+  build_qsharp:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set env
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+    - name: Build Q# and push to Docker Hub
+      env:
+        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
+      run: |
+        docker build --build-arg quantum_env=qsharp.sh . --file Dockerfile --tag mickahell/quantum_lab_qsharp:${RELEASE_VERSION}
+        docker tag mickahell/quantum_lab_qsharp:${RELEASE_VERSION} mickahell/quantum_lab_qsharp:latest
+        docker login --username=mickahell --password=${DOCKERHUB_PASS}
+        docker push mickahell/quantum_lab_qsharp --all-tags
