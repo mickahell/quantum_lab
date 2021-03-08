@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build qiskit and push to Docker Hub
-    - run: |
+      run: |
         docker build --build-arg quantum_env=qiskit.sh . --file Dockerfile --tag ${DOCKERHUB_USERNAME}/quantum_lab_qiskit:$(date +%s)
         docker login --username=${DOCKERHUB_USERNAME} --email=${DOCKERHUB_EMAIL} --password=${DOCKERHUB_PASSWORD}
         docker push ${DOCKERHUB_USERNAME}/quantum_lab_qiskit
@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker qml
-    - run: |
+      run: |
         docker build --build-arg quantum_env=qml.sh . --file Dockerfile --tag ${DOCKERHUB_USERNAME}/quantum_lab_qml:$(date +%s)
         docker login --username=${DOCKERHUB_USERNAME} --email=${DOCKERHUB_EMAIL} --password=${DOCKERHUB_PASSWORD}
         docker push ${DOCKERHUB_USERNAME}/quantum_lab_qml
