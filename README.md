@@ -41,15 +41,18 @@ The folder `data` is link to the host file and allow to register the modificatio
 ### Jupyter
 To launch the Jupyter notebook instance :
 - be inside the `data`folder
-- run : `./start_jupyter.com`
+- run : `./start_jupyter.sh`
 - copy and paste this url in your browser : `http://127.0.0.1:8888/`
 
 ## Simple docker commands
-- To go inside a started containeur : `docker exec -it -u root [CONTAINEUR_ID] /bin/bash`
-- To start a containeur : `docker start [CONTAINEUR_ID]`
-- See the existed containeur : `docker ps -a`
+- List the existed images : `docker images`
+- List the existed containeur : `docker ps -a`
   - The `-a` is used the see every existed containeurs, that's include the stopped one
-- List the images existed : `docker images`
+- To start a containeur : `docker start [CONTAINEUR_ID]`
+- To go inside a started containeur : `docker exec -it -u root [CONTAINEUR_ID] /bin/bash`
 - Delete containeur : `docker rm [CONTAINEUR_ID]`
+- Delete stopped container : `docker container prune`
 - Delete image : `docker rmi [NAME_OF_THE_IMAGE]`
-  - You can use `-f` to force the suppression and delete the containeurs associates to the image
+  - You can use `-f` to force the suppression and delete the containeurs associated to the image
+- List the existed volume : `docker volume ls`
+- Delete volume not used anymore : `docker volume prune`
