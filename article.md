@@ -2,18 +2,19 @@
 
 ## Abstract
 We are at the beginning of the run for the quantum supremacy and quantum independant of the different worldwide government. More and more companies are building their own quantum computer with their own librairy/language. Some of these allow to connect to multiple quantum computers and other are specializes for one type of computer. Also some librairies are very specified for some kind of task like Pennylane for QML. 
+
 For these reason it begans for and more complicated to setup a clear unique environment to develop with each quantum technologies or to switch between each others. This article is about the setup of a simple multi-Docker image, allowing to build a clean environment for each technologies known and a sharable volume to share the content between the host computer and the differents container.
 
 ## Table of content
 1. [Pre-requisites](#prereqisites)
 2. [What's Docker ?](#docker)
-3. [How does it work](#working)
-	3.1. [Building image](#image)
+3. [How does it work](#working)  
+	3.1. [Building image](#image)  
 	3.2 [Create container](#container)
 4. [Annexes](#annexes)
 5. [References](#ref)
 
-## Pre-requisites
+## Pre-requisites <a class="anchor" id="prereqisites"></a>
 First to be able to run the lab, you need to install Docker, that's the only requirement needed :
 - <details><summary>Linux</summary>
   <pre>apt-get install docker-ce docker-ce-cli containerd.io</pre>
@@ -61,7 +62,10 @@ Finally to create our container and to be allow to use volume sync and jupyter y
 
 ## Futur
 We are at the very beginning of the quantum era so that means the alrealdy installed quantum technologies will have updated very often and more and more libraries and languages will be coming soon. So the image will be updated as often as possible and more environment will be soon available as new option.
+
 The goal is to make everything possible to keep the image as simple as possible to use and to setup. Pre build image are already available in the [Docker Hub](), allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.
+
+If you have an idea of features do not hesitate and create an **[issue](https://github.com/mickahell/quantum_lab/issues/new)**.
 
 ## Annexes
 ### Environment detailes
@@ -77,7 +81,7 @@ The goal is to make everything possible to keep the image as simple as possible 
 All the libs setup scripts are available in the folder `/opt/quantum_lab/build` inside the image, some of the libs can live together and some cannot (ex. `qiskit` and `pennylane-qiskit` can't).
 
 #### Simulaqron
-COMMING SOON !
+COMING SOON !
 
 ### Hello world!
 Hello world program for each environment are available inside the image in the data folder and allow to test the quantum laboratory.
@@ -96,9 +100,9 @@ Hello world program for each environment are available inside the image in the d
 - Delete volume not used anymore : `docker volume prune`
 
 ## References
-[1] [Qiskit]() 
-[2] [Pennylane]()
-[3] [Q#]()
+[1] [Qiskit]()  
+[2] [Pennylane]()  
+[3] [Q#]()  
 [4] [Simulaqron]()
 
 ## Author
