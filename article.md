@@ -1,4 +1,5 @@
 # Quantum Lab
+A simple docker image to simulate a full *Quantum laboratory*
 
 ## Abstract
 We are at the beginning of the run for the quantum supremacy and quantum independant of the different worldwide government. More and more companies are building their own quantum computer with their own librairy/language. Some of these allow to connect to multiple quantum computers and other are specializes for one type of computer. Also some librairies are very specified for some kind of task like Pennylane for QML. 
@@ -24,16 +25,18 @@ First to be able to run the lab, you need to install Docker, that's the only req
   https://www.docker.com/products/docker-desktop
 </details>
 
-## What is Docker
+## What is Docker <a class="anchor" id="docker"></a>
 
-## How does it work
+## How does it work <a class="anchor" id="working"></a>
 
 [SCHEMA]
+
+Download the code : **[Github](https://github.com/mickahell/quantum_lab)**
 
 The role of the image is to simulate a virtual environment as a Quantum lab for a specialize library/language. Another need is to synchonize the data between the container of the host computer.
 Like this, we could develop our code on our favorite IDE on our classical computer and run the code directly in the container.
 
-### Build the image
+### Build the image <a class="anchor" id="image"></a>
 First we need to build the image, we have to generate a docker image from our `Dockerfile` by using : 
 <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
 Feel free to replace `qiskit.sh` with `qml.sh`or `qsharp.sh`. That'll setup a specialize environment for of this library/language. This command can take several minute, do not stop it until the command gave back you the hand.
@@ -46,7 +49,7 @@ Pre build images for each environment are available in the [Docker Hub] :
 You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quantum_lab_qiskit`)
 To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : `docker image [YOUR_IMAGE] quantum_lab`
 
-### Create container
+### Create container <a class="anchor" id="container"></a>
 Now we have our image `quantum_lab`, you can see it by taping `docker images`. Next we need to setup a container who we be our virtual environment. We can create as much container as the stockage of our computer allows it.
 
 #### Volume
@@ -81,10 +84,10 @@ If you have an idea of features do not hesitate and create an **[issue](https://
 All the libs setup scripts are available in the folder `/opt/quantum_lab/build` inside the image, some of the libs can live together and some cannot (ex. `qiskit` and `pennylane-qiskit` can't).
 
 #### Simulaqron
-COMING SOON !
+**COMING SOON !**
 
 ### Hello world!
-Hello world program for each environment are available inside the image in the data folder and allow to test the quantum laboratory.
+*Hello world* program for each environment are available inside the image in the data folder and allow to test the quantum laboratory.
 
 ### Simple docker commands
 - List the existed images : `docker images`
@@ -99,10 +102,11 @@ Hello world program for each environment are available inside the image in the d
 - List the existed volume : `docker volume ls`
 - Delete volume not used anymore : `docker volume prune`
 
-## References
-[1] [Qiskit]()  
-[2] [Pennylane]()  
-[3] [Q#]()  
+## References <a class="anchor" id="ref"></a>
+[1] [Qiskit](https://qiskit.org)  
+[2] [Pennylane](https://pennylane.ai)  
+[3] [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/)  
 [4] [Simulaqron]()
 
 ## Author
+Michaël Rollin, [GitHub](https://github.com/mickahell), [Twitter](https://twitter.com/mickahell89700), [Linkedin](https://www.linkedin.com/in/michaelrollin/)
