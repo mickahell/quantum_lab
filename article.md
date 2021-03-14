@@ -46,8 +46,9 @@ Pre build images for each environment are available in the [Docker Hub] :
 - `quantum_lab_qiskit`
 - `quantum_lab_qml`
 - `quantum_lab_qsharp`
-You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quantum_lab_qiskit`)
-To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : `docker image [YOUR_IMAGE] quantum_lab`
+
+You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quantum_lab_qiskit`)  
+To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : <pre>docker image tag mickahell/[IMAGE_NAME]:latest quantum_lab:latest</pre>
 
 ### Create container <a class="anchor" id="container"></a>
 Now we have our image `quantum_lab`, you can see it by taping `docker images`. Next we need to setup a container who we be our virtual environment. We can create as much container as the stockage of our computer allows it.
@@ -66,7 +67,7 @@ Finally to create our container and to be allow to use volume sync and jupyter y
 ## Futur
 We are at the very beginning of the quantum era so that means the alrealdy installed quantum technologies will have updated very often and more and more libraries and languages will be coming soon. So the image will be updated as often as possible and more environment will be soon available as new option.
 
-The goal is to make everything possible to keep the image as simple as possible to use and to setup. Pre build image are already available in the [Docker Hub](), allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.
+The goal is to make everything possible to keep the image as simple as possible to use and to setup. Pre build image are already available in the [Docker Hub](https://hub.docker.com/), allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.
 
 If you have an idea of features do not hesitate and create an **[issue](https://github.com/mickahell/quantum_lab/issues/new)**.
 
