@@ -27,7 +27,7 @@ First to be able to run the lab, you need to install Docker, that's the only req
 
 ## What is Docker <a class="anchor" id="docker"></a>
 
-<table>
+<table border=0>
 	<tbody>
 		<tr>
 			<td width=66%><a href="https://www.docker.com/">Docker</a> is a technology allowing OS virtualization and system simulation. It allow to generalize a simple application with its whole environment into a deployable package to be share and run everywhere on every computer supporting Docker. This package is calling a container, the container is OS-level virtualization and every container share their own kernel. Moreover the container is fully isolated from the host application.</td>
