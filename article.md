@@ -11,11 +11,13 @@ For these reason it begans for and more complicated to setup a clear unique envi
 2. [What's Docker ?](#docker)
 3. [How does it work](#working)  
 	3.1. [Building image](#image)  
-	3.2 [Create container](#container)
-4. [Annexes](#annexes)
-5. [References](#ref)
+	3.2. [Create container](#container)  
+	3.3. [Run everything together](#run)
+4. [Futur](#futur)
+5. [Annexes](#annexes)
+6. [References](#ref)
 
-## Pre-requisites <a class="anchor" id="prereqisites"></a>
+## 1. Pre-requisites <a class="anchor" id="prereqisites"></a>
 First to be able to run the lab, you need to install Docker, that's the only requirement needed :
 - <details><summary>Linux</summary>
   <pre>apt-get install docker-ce docker-ce-cli containerd.io</pre>
@@ -25,7 +27,7 @@ First to be able to run the lab, you need to install Docker, that's the only req
   https://www.docker.com/products/docker-desktop
 </details>
 
-## What is Docker <a class="anchor" id="docker"></a>
+## 2. What is Docker <a class="anchor" id="docker"></a>
 
 <table border=0>
 	<tbody>
@@ -36,7 +38,7 @@ First to be able to run the lab, you need to install Docker, that's the only req
 	</tbody>
 </table>
 
-## How does it work <a class="anchor" id="working"></a>
+## 3. How does it work <a class="anchor" id="working"></a>
 
 <table border=0>
 	<tbody>
@@ -47,7 +49,7 @@ First to be able to run the lab, you need to install Docker, that's the only req
 	</tbody>
 </table>
 
-### Build the image <a class="anchor" id="image"></a>
+### 3.1. Build the image <a class="anchor" id="image"></a>
 First we need to build the image, we have to generate a docker image from our `Dockerfile` by using : 
 <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
 Feel free to replace `qiskit.sh` with `qml.sh`or `qsharp.sh`. That'll setup a specialize environment for of this library/language. This command can take several minute, do not stop it until the command gave back you the hand.
@@ -61,7 +63,7 @@ Pre build images for each environment are available in the [Docker Hub] :
 You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quantum_lab_qiskit`)  
 To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : <pre>docker image tag mickahell/[IMAGE_NAME]:latest quantum_lab:latest</pre>
 
-### Create container <a class="anchor" id="container"></a>
+### 3.2. Create container <a class="anchor" id="container"></a>
 Now we have our image `quantum_lab`, you can see it by taping `docker images`. Next we need to setup a container who we be our virtual environment. We can create as much container as the stockage of our computer allows it.
 
 #### Volume
@@ -71,18 +73,18 @@ To sync data between the container and the host computer we need to create a vol
 In each environment Jupyter notebook is available, to synchronize it with our host browser we need to sync port network to do this just use the option `-p 8888:8888` in the container creation. Then a script allow you to start a Jupyter server : `/opt/quantum_lab/data/start_jupyter.sh`. Finally just go in your browser and tap : `http://127.0.0.1:8888/`
 
 
-### Run everything together
+### 3.3. Run everything together <a class="anchor" id="run"></a>
 Finally to create our container and to be allow to use volume sync and jupyter you can use this simple command line :
 <pre>docker run -it -v $(pwd)/data:/opt/quantum_lab/data --entrypoint=/bin/bash -p 8888:8888 -e LANG=C.UTF-8 quantum_lab</pre>
 
-## Futur
+## 4. Futur <a class="anchor" id="futur"></a>
 We are at the very beginning of the quantum era so that means the alrealdy installed quantum technologies will have updated very often and more and more libraries and languages will be coming soon. So the image will be updated as often as possible and more environment will be soon available as new option.
 
 The goal is to make everything possible to keep the image as simple as possible to use and to setup. Pre build image are already available in the [Docker Hub](https://hub.docker.com/), allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.
 
 If you have an idea of features do not hesitate and create an **[issue](https://github.com/mickahell/quantum_lab/issues/new)**.
 
-## Annexes
+## 5. Annexes <a class="anchor" id="annexes"></a>
 ### Environment detailes
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
 - 3 lib setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org) and one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/)
@@ -114,7 +116,7 @@ All the libs setup scripts are available in the folder `/opt/quantum_lab/build` 
 - List the existed volume : `docker volume ls`
 - Delete volume not used anymore : `docker volume prune`
 
-## References <a class="anchor" id="ref"></a>
+## 6. References <a class="anchor" id="ref"></a>
 [1] [Qiskit](https://qiskit.org)  
 [2] [Pennylane](https://pennylane.ai)  
 [3] [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/)  
