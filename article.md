@@ -95,7 +95,7 @@ If you have an idea of features do not hesitate and create an **[issue](https://
 
 All the libs setup scripts are available in the folder `/opt/quantum_lab/build` inside the image, some of the libs can live together and some cannot (ex. `qiskit` and `pennylane-qiskit` can't).
 
-#### Simulaqron
+#### Simulaqron & myQLM (Atos)
 **COMING SOON !**
 
 ### Hello world!
