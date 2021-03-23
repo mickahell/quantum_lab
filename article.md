@@ -4,7 +4,7 @@ A simple docker image to simulate a full *Quantum laboratory*
 ## Abstract
 We are at the beginning of the run for the quantum supremacy and quantum independant of the different worldwide government. More and more companies are building their own quantum computer with their own librairy/language. Some of these allow to connect to multiple quantum computers and other are specializes for one type of computer. Also some librairies are very specified for some kind of task like Pennylane for QML. 
 
-For these reason it begans for and more complicated to setup a clear unique environment to develop with each quantum technologies or to switch between each others. This article is about the setup of a simple multi-Docker image, allowing to build a clean environment for each technologies known and a sharable volume to share the content between the host computer and the differents container.
+For these reason it begans and more complicated to setup a clear unique environment to develop with each quantum technologies or to switch between each others. This article is about the setup of a simple multi-Docker image, allowing to build a clean environment for each technologies known and a sharable volume to share the content between the host computer and the differents container.
 
 ## Table of content
 1. [Pre-requisites](#prereqisites)
@@ -52,10 +52,10 @@ First to be able to run the lab, you need to install Docker, that's the only req
 ### 3.1. Build the image <a class="anchor" id="image"></a>
 First we need to build the image, we have to generate a docker image from our `Dockerfile` by using : 
 <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
-Feel free to replace `qiskit.sh` with `qml.sh`or `qsharp.sh`. That'll setup a specialize environment for of this library/language. This command can take several minute, do not stop it until the command gave back you the hand.
+Feel free to replace `qiskit.sh` with `qml.sh`or `qsharp.sh`. That'll setup a specialize environment for this library/language. This command can take several minute, do not stop it until the command gave you the hand back.
 
 #### Pre build images
-Pre build images for each environment are available in the [Docker Hub] :
+Pre build images for each environment are available in the [Docker Hub](https://hub.docker.com/search?q=mickahell%2Fquantum&type=image) :
 - `quantum_lab_qiskit`
 - `quantum_lab_qml`
 - `quantum_lab_qsharp`
@@ -70,7 +70,8 @@ Now we have our image `quantum_lab`, you can see it by taping `docker images`. N
 To sync data between the container and the host computer we need to create a volume, by default in the image a simple volume is create between the default docker sharing folder of the host and the `/opt/quantum_lab/data` folder. To make things easier we can specified which folder of our host we want to sync by using `-v [YOUR_FOLDER]:/opt/quantum_lab/data` during the creation of the container.
 
 #### Jupyter
-In each environment Jupyter notebook is available, to synchronize it with our host browser we need to sync port network to do this just use the option `-p 8888:8888` in the container creation. Then a script allow you to start a Jupyter server : `/opt/quantum_lab/data/start_jupyter.sh`. Finally just go in your browser and tap : `http://127.0.0.1:8888/`
+In each environment Jupyter notebook is available, to synchronize it with our host browser we need to sync port network to do this just use the option `-p 8888:8888` in the container creation. Then a script allow you to start a Jupyter server : `/opt/quantum_lab/data/start_jupyter.sh`.  
+Finally just go in your browser and tap : `http://127.0.0.1:8888/`
 
 
 ### 3.3. Run everything together <a class="anchor" id="run"></a>
@@ -78,9 +79,9 @@ Finally to create our container and to be allow to use volume sync and jupyter y
 <pre>docker run -it -v $(pwd)/data:/opt/quantum_lab/data --entrypoint=/bin/bash -p 8888:8888 -e LANG=C.UTF-8 quantum_lab</pre>
 
 ## 4. Futur <a class="anchor" id="futur"></a>
-We are at the very beginning of the quantum era so that means the alrealdy installed quantum technologies will have updated very often and more and more libraries and languages will be coming soon. So the image will be updated as often as possible and more environment will be soon available as new option.
+We are at the very beginning of the quantum era so that means the already installed quantum technologies will have updated very often and more and more libraries and languages will be coming soon. So the image will be updated as often as possible and more environment will be soon available as new option.
 
-The goal is to make everything possible to keep the image as simple as possible to use and to setup. Pre build image are already available in the [Docker Hub](https://hub.docker.com/), allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.
+The goal is to make everything possible to keep the image as simple as possible to use and to setup. Pre build image are already available in the [Docker Hub](https://hub.docker.com/search?q=mickahell%2Fquantum&type=image), allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.
 
 If you have an idea of features do not hesitate and create an **[issue](https://github.com/mickahell/quantum_lab/issues/new)**.
 
@@ -121,7 +122,8 @@ All the libs setup scripts are available in the folder `/opt/quantum_lab/build` 
 [2] [Pennylane](https://pennylane.ai)  
 [3] [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/)  
 [4] [Docker](https://www.docker.com)  
-[5] [Simulaqron]()
+[5] [Simulaqron](http://www.simulaqron.org/)
+[6] [myQLM](https://atos.net/en/lp/myqlm)
 
 ## Author
 Michaël Rollin, [GitHub](https://github.com/mickahell), [Twitter](https://twitter.com/mickahell89700), [Linkedin](https://www.linkedin.com/in/michaelrollin/)
