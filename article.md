@@ -38,12 +38,14 @@ First to be able to run the lab, you need to install Docker, that's the only req
 
 ## How does it work <a class="anchor" id="working"></a>
 
-[SCHEMA]
-
-Download the code : **[Github](https://github.com/mickahell/quantum_lab)**
-
-The role of the image is to simulate a virtual environment as a Quantum lab for a specialize library/language. Another need is to synchonize the data between the container of the host computer.
-Like this, we could develop our code on our favorite IDE on our classical computer and run the code directly in the container.
+<table border=0>
+	<tbody>
+		<tr>
+			<td><img src="ql.PNG" width=100%></td>
+			<td>The role of the image is to simulate a virtual environment as a Quantum lab for a specialize library/language. Another need is to synchonize the data between the container of the host computer. <br /> Like this, we could develop our code on our favorite IDE on our classical computer and run the code directly in the container. <br /><br /> Download the code : <b><a href="https://github.com/mickahell/quantum_lab">Github</a></b></td>
+		</tr>
+	</tbody>
+</table>
 
 ### Build the image <a class="anchor" id="image"></a>
 First we need to build the image, we have to generate a docker image from our `Dockerfile` by using : 
