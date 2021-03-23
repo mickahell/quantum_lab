@@ -122,7 +122,7 @@ All the libs setup scripts are available in the folder `/opt/quantum_lab/build` 
 [2] [Pennylane](https://pennylane.ai)  
 [3] [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/)  
 [4] [Docker](https://www.docker.com)  
-[5] [Simulaqron](http://www.simulaqron.org/)
+[5] [Simulaqron](http://www.simulaqron.org/)  
 [6] [myQLM](https://atos.net/en/lp/myqlm)
 
 ## Author
