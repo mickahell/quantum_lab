@@ -6,6 +6,6 @@ echo 'yes' | simulaqron start
 /opt/quantum_lab/data/CQC-Python/examples/pythonLib/corrRNG/run.sh
 
 # Wait time to the ERP finish and then stop and reset nodes
-sleep 7
+sleep 5
 simulaqron stop
 echo 'yes' | simulaqron reset
