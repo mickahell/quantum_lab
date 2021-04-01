@@ -59,6 +59,7 @@ Pre build images for each environment are available in the [Docker Hub](https://
 - `quantum_lab_qiskit`
 - `quantum_lab_qml`
 - `quantum_lab_qsharp`
+- `quantum_lab_simulaqron`
 
 You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quantum_lab_qiskit`)  
 To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : <pre>docker image tag mickahell/[IMAGE_NAME]:latest quantum_lab:latest</pre>
@@ -88,17 +89,19 @@ If you have an idea of features do not hesitate and create an **[issue](https://
 ## 5. Annexes <a class="anchor" id="annexes"></a>
 ### Environment detailes
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
-- 3 lib setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org) and one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/)
+- 4 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/) and one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html)
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit.sh`
     - Libs : ```qiskit, qiskit[visualization]```
   - `qsharp.sh`
     - Libs : ```qsharp, iqsharp```
+  - `simulaqron.sh`
+    - Libs : ```simulaqron```
 
 All the libs setup scripts are available in the folder `/opt/quantum_lab/build` inside the image, some of the libs can live together and some cannot (ex. `qiskit` and `pennylane-qiskit` can't).
 
-#### Simulaqron & myQLM (Atos)
+#### Protocols for experiencing SimulaQron & myQLM (Atos)
 **COMING SOON !**
 
 ### Hello world!
