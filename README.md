@@ -6,6 +6,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qiskit?label=Quantum%20Lab%20Qiskit&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qiskit)
 [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qml?label=Quantum%20Lab%20QML&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qsharp?label=Quantum%20Lab%20Q%23&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qsharp)
+[![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_simulaqron?label=Quantum%20Lab%20SimulaQron&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_simulaqron)
 
 ## Prerequisites
 - <details><summary>Linux</summary>
@@ -22,7 +23,7 @@
 
 ## Getting started
 - Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
-  - You can replace `qiskit.sh` with the following one `qml.sh`or `qsharp.sh`
+  - You can replace `qiskit.sh` with the following one `qml.sh`, `qsharp.sh` or `simulaqron.sh`
 - To create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
@@ -34,6 +35,8 @@
     - Libs : ```qiskit, qiskit[visualization]```
   - `qsharp.sh`
     - Libs : ```qsharp, iqsharp```
+  - `simulaqron.sh`
+    - Libs : ```simulaqron```
 
 ### Volume
 The folder `data` is link to the host file and allow to register the modification in the host computer
