@@ -35,3 +35,12 @@ jobs:
     - name: Build the Docker Q#
       run: docker build --build-arg quantum_env=qsharp.sh . --file Dockerfile --tag quantum_lab_qsharp:main
 
+  build_simulaqron:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker SimulaQron
+      run: docker build --build-arg quantum_env=simulaqron.sh . --file Dockerfile --tag quantum_lab_simulaqron:main
+
