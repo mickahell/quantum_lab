@@ -28,7 +28,7 @@
 
 ### Environment
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
-- 3 lib setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org) and one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/)
+- 4 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/) and one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html)
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit.sh`
