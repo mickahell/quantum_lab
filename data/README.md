@@ -7,6 +7,7 @@
   - `qiskit`
   - `qml`(Pennylane)
   - `Q#`
+  - `SimulaQron`
 
 ## Jupyter
 - To start the jupyter server, run the script `./start_jupyter.sh`
