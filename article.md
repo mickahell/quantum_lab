@@ -20,7 +20,8 @@ For these reason it begans and more complicated to setup a clear unique environm
 ## 1. Pre-requisites <a class="anchor" id="prereqisites"></a>
 First to be able to run the lab, you need to install Docker, that's the only requirement needed :
 - <details><summary>Linux</summary>
-  <pre>apt-get install docker-ce docker-ce-cli containerd.io</pre>
+  <pre>apt-get install docker-ce docker-ce-cli containerd.io
+  Refer to https://docs.docker.com/engine/install/ubuntu/</pre>
 </details>
 
 - <details><summary>Mac / Windows</summary>
