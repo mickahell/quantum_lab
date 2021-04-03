@@ -2,10 +2,10 @@ FROM ubuntu:18.04
 
 # Choose your quantum env
 ARG quantum_env
-#ARG quantum_env=qiskit.sh
-#ARG quantum_env=qml.sh
-#ARG quantum_env=qsharp.sh
-#ARG quantum_env=simulaqron.sh
+#ARG quantum_env=qiskit
+#ARG quantum_env=qml
+#ARG quantum_env=qsharp
+#ARG quantum_env=simulaqron
 
 # Var for labels
 ARG GITHUB_ACTOR
@@ -41,9 +41,9 @@ ADD data/* /opt/quantum_lab/data/
 # General & env requirements
 RUN pip3 install --upgrade pip setuptools
 RUN pip3 install -r /opt/quantum_lab/build/requirements.txt
-RUN /opt/quantum_lab/build/${quantum_env}
+RUN /opt/quantum_lab/build/${quantum_env}.sh
 
 WORKDIR /opt/quantum_lab/data
-VOLUME /opt/quantum_lab/data
+VOLUME /opt/quantum_lab/data/share
 
 CMD /bin/bash
