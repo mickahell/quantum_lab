@@ -2,6 +2,9 @@
 - This folder is sync with your host folder
 - You can work on your host IDE and run your program inside the container
 
+## Sharing file
+- File sync with your host computer
+
 ## Program example
 - Some example of program for each environment are available here :
   - `qiskit`
