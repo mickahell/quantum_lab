@@ -39,7 +39,7 @@
     - Libs : ```simulaqron```
 
 ### Volume
-The folder `data` is link to the host file and allow to register the modification in the host computer
+The folder `data/share` is link to the host file and allow to register the modification in the host computer
 
 ### Jupyter
 To launch the Jupyter notebook instance :
