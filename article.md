@@ -13,7 +13,7 @@ For these reason it begans and more complicated to setup a clear unique environm
 	3.1. [Building image](#image)  
 	3.2. [Create container](#container)  
 	3.3. [Run everything together](#run)
-4. [Futur](#futur)
+4. [Future](#future)
 5. [Annexes](#annexes)
 6. [References](#ref)
 
@@ -89,7 +89,7 @@ Finally just go in your browser and tap : `http://127.0.0.1:8888/`
 Finally to create our container and to be allow to use volume sync and jupyter you can use this simple command line :
 <pre>docker run -it -v $(pwd)/data:/opt/quantum_lab/data/share --entrypoint=/bin/bash -p 8888:8888 -e LANG=C.UTF-8 quantum_lab</pre>
 
-## 4. Future <a class="anchor" id="futur"></a>
+## 4. Future <a class="anchor" id="future"></a>
 We are at the very beginning of the quantum era so that means the already installed quantum technologies will have updated very often and more and more libraries and languages will be coming soon. So the image will be updated as often as possible and more environment will be soon available as new option.
 
 The goal is to make everything possible to keep the image as simple as possible to use and to setup. Pre build image are already available in the [Docker Hub](https://hub.docker.com/search?q=mickahell%2Fquantum&type=image), allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.
