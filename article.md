@@ -143,5 +143,6 @@ All the libs setup scripts are available in the folder `/opt/quantum_lab/build` 
 <a id="6">[6]</a> [Docker](https://www.docker.com), An introduction to Docker for reproducible research, 2015, [DOI: 10.1145/2723872.2723882](https://doi.org/10.1145/2723872.2723882)
 
 ## Author
-Michaël Rollin, [GitHub](https://github.com/mickahell), [Twitter](https://twitter.com/mickahell89700), [Linkedin](https://www.linkedin.com/in/michaelrollin/)
-If you use my work, please cite as : <pre>Quantum Lab: Docker image for quantum laboratory, Michael Rollin, 2021, DOI: <a href=https://doi.org/10.5281/zenodo.4664195>10.5281/zenodo.4664195</a></pre>
+Michaël Rollin, [GitHub](https://github.com/mickahell), [Twitter](https://twitter.com/mickahell89700), [Linkedin](https://www.linkedin.com/in/michaelrollin/)  
+### Cite as
+If you use my work, please cite as : <pre>Quantum Lab: Docker image for quantum laboratory, Michaël Rollin, 2021, DOI: <a href=https://doi.org/10.5281/zenodo.4664195>10.5281/zenodo.4664195</a></pre>
