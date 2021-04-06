@@ -53,7 +53,7 @@ First to be able to run the lab, you need to install Docker, that's the only req
 ### 3.1. Build the image <a class="anchor" id="image"></a>
 First we need to build the image, we have to generate a docker image from our `Dockerfile` by using : 
 <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
-Feel free to replace `qiskit.sh` with `qml.sh`or `qsharp.sh`. That'll setup a specialize environment for this library/language. This command can take several minute, do not stop it until the command gave you the hand back.
+Feel free to replace `qiskit.sh` with `qml.sh`, `qsharp.sh`, `simulaqron.sh` or `myqlm.sh`. That'll setup a specialize environment for this library/language. This command can take several minute, do not stop it until the command gave you the hand back.
 
 #### Pre build images
 Pre build images for each environment are available in the [Docker Hub](https://hub.docker.com/search?q=mickahell%2Fquantum&type=image) :
@@ -61,6 +61,7 @@ Pre build images for each environment are available in the [Docker Hub](https://
 - `quantum_lab_qml`
 - `quantum_lab_qsharp`
 - `quantum_lab_simulaqron`
+- `quantum_lab_myqlm`
 
 You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quantum_lab_qiskit`)  
 To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : <pre>docker image tag mickahell/[IMAGE_NAME]:latest quantum_lab:latest</pre>
@@ -93,6 +94,8 @@ We are at the very beginning of the quantum era so that means the already instal
 
 The goal is to make everything possible to keep the image as simple as possible to use and to setup. Pre build image are already available in the [Docker Hub](https://hub.docker.com/search?q=mickahell%2Fquantum&type=image), allowing to just download the image and create container, so no need to clone the project and build entirely the images anymore.
 
+Also, the experiences part will be externalize in another GitHub repository and download automatically in the build phase, in order to keep the Docker image clean without too much _random_ data.
+
 If you have an idea of features do not hesitate and create an **[issue](https://github.com/mickahell/quantum_lab/issues/new)**.
 
 ## 5. Annexes <a class="anchor" id="annexes"></a>
@@ -107,10 +110,12 @@ If you have an idea of features do not hesitate and create an **[issue](https://
     - Libs : ```qsharp, iqsharp```
   - `simulaqron.sh`
     - Libs : ```simulaqron```
+  - `myqlm.sh`
+    - Libs : ```myqlm, libmagickwand-dev, myqlm-interop[qiskit_binder]```
 
 All the libs setup scripts are available in the folder `/opt/quantum_lab/build` inside the image, some of the libs can live together and some cannot (ex. `qiskit` and `pennylane-qiskit` can't).
 
-#### Protocols for experiencing SimulaQron & myQLM (Atos)
+#### Protocols for experiencing Quantum
 **COMING SOON !**
 
 ### Hello world!
