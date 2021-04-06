@@ -18,7 +18,7 @@ For these reason it begans and more complicated to setup a clear unique environm
 6. [References](#ref)
 
 ## 1. Pre-requisites <a class="anchor" id="prereqisites"></a>
-First to be able to run the lab, you need to install Docker, that's the only requirement needed :
+First to be able to run the lab, you need to install Docker[[6]](#6), that's the only requirement needed :
 - <details><summary>Linux</summary>
   <pre>apt-get install docker-ce docker-ce-cli containerd.io
   Refer to https://docs.docker.com/engine/install/ubuntu/</pre>
@@ -101,7 +101,7 @@ If you have an idea of features do not hesitate and create an **[issue](https://
 ## 5. Annexes <a class="anchor" id="annexes"></a>
 ### Environment detailes
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
-- 4 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/) and one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html)
+- 4 libs setup are available, one for installating Qiskit[[1]](#1), one for using Pannylane[[2]](#2), one for using Q#[[3]](#3), one for SimulaQron[[4]](#4), and one for myQLM[[5]](#5)
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit.sh`
@@ -135,12 +135,12 @@ All the libs setup scripts are available in the folder `/opt/quantum_lab/build` 
 - Delete volume not used anymore : `docker volume prune`
 
 ## 6. References <a class="anchor" id="ref"></a>
-[1] [Qiskit](https://qiskit.org)  
-[2] [Pennylane](https://pennylane.ai)  
-[3] [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/)  
-[4] [Docker](https://www.docker.com)  
-[5] [Simulaqron](http://www.simulaqron.org/)  
-[6] [myQLM](https://atos.net/en/lp/myqlm)
+<a id="1">[1]</a> [Qiskit](https://qiskit.org): An Open-source Framework for Quantum Computing, 2019, [DOI: 10.5281/zenodo.2562110](10.5281/zenodo.2562110)  
+<a id="2">[2]</a> [Pennylane](https://pennylane.ai): Automatic differentiation of hybrid quantum-classical computations, 2018, [DOI: arXiv:1811.04968](https://arxiv.org/abs/1811.04968)  
+<a id="3">[3]</a> [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/): The Microsoft Quantum Development Kit Preview, 2017   
+<a id="4">[4]</a> [Simulaqron](http://www.simulaqron.org/): A simulator for developing quantum internet software, 2018, [DOI: 10.1088/2058-9565/aad56e](https://doi.org/10.1088/2058-9565/aad56e)  
+<a id="5">[5]</a> [AQASM](https://atos.net/en/lp/myqlm): Atos Quantum Assembler, 2021, [DOI: arXiv:2102.12973](https://arxiv.org/abs/2102.12973)  
+<a id="6">[6]</a> [Docker](https://www.docker.com), An introduction to Docker for reproducible research, 2015, [DOI: 10.1145/2723872.2723882](https://doi.org/10.1145/2723872.2723882)
 
 ## Author
 Michaël Rollin, [GitHub](https://github.com/mickahell), [Twitter](https://twitter.com/mickahell89700), [Linkedin](https://www.linkedin.com/in/michaelrollin/)
