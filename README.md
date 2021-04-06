@@ -63,3 +63,6 @@ To launch the Jupyter notebook instance :
   - You can use `-f` to force the suppression and delete the containeurs associated to the image
 - List the existed volume : `docker volume ls`
 - Delete volume not used anymore : `docker volume prune`
+
+### Cite as
+If you use my work, please cite as : <pre>Quantum Lab: Docker image for quantum laboratory, Michaël Rollin, 2021, DOI: <a href=https://doi.org/10.5281/zenodo.4664195>10.5281/zenodo.4664195</a></pre>
