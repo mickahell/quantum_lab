@@ -44,3 +44,11 @@ jobs:
     - name: Build the Docker SimulaQron
       run: docker build --build-arg quantum_env=simulaqron.sh . --file Dockerfile --tag quantum_lab_simulaqron:main
 
+  build_myqlm:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker myQLM
+      run: docker build --build-arg quantum_env=myqlm.sh . --file Dockerfile --tag quantum_lab_myqlm:main
