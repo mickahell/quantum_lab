@@ -23,12 +23,12 @@
 
 ## Getting started
 - Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
-  - You can replace `qiskit.sh` with the following one `qml.sh`, `qsharp.sh` or `simulaqron.sh`
+  - You can replace `qiskit.sh` with the following one `qml.sh`, `qsharp.sh`, `simulaqron.sh` or `myqlm.sh`
 - To create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
-- 4 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/) and one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html)
+- 4 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/), one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html) and one for [myQLM](https://atos.net/en/lp/myqlm)
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit.sh`
@@ -37,6 +37,8 @@
     - Libs : ```qsharp, iqsharp```
   - `simulaqron.sh`
     - Libs : ```simulaqron```
+  - `myqlm.sh`
+    - Libs : ```myqlm, libmagickwand-dev, myqlm-interop[qiskit_binder]```
 
 ### Volume
 The folder `data/share` is link to the host file and allow to register the modification in the host computer
