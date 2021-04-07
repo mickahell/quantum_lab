@@ -79,7 +79,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/mickahell"><img src="https://avatars.githubusercontent.com/u/20951376?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mica</b></sub></a><br /><a href="#tutorial-mickahell" title="Tutorials">✅</a></td>
+    <td align="center"><a href="https://github.com/mickahell"><img src="https://avatars.githubusercontent.com/u/20951376?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mica</b></sub></a><br /><a href="#tutorial-mickahell" title="Tutorials">✅</a> <a href="https://github.com/mickahell/quantum_lab/commits?author=mickahell" title="Code">💻</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/albertomaldonadoromo/"><img src="https://avatars.githubusercontent.com/u/21325664?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alberto Maldonado</b></sub></a><br /><a href="https://github.com/mickahell/quantum_lab/pulls?q=is%3Apr+reviewed-by%3AMaldoAlberto" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
