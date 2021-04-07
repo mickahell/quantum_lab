@@ -1,6 +1,6 @@
 # Quantum Lab
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![DOI](https://zenodo.org/badge/343446026.svg)](https://zenodo.org/badge/latestdoi/343446026)  
 [![Docker Image CI](https://github.com/mickahell/quantum_lab/actions/workflows/docker-image.yml/badge.svg)](https://github.com/mickahell/quantum_lab/actions/workflows/docker-image.yml)
@@ -80,6 +80,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/mickahell"><img src="https://avatars.githubusercontent.com/u/20951376?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mica</b></sub></a><br /><a href="#tutorial-mickahell" title="Tutorials">✅</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/albertomaldonadoromo/"><img src="https://avatars.githubusercontent.com/u/21325664?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alberto Maldonado</b></sub></a><br /><a href="https://github.com/mickahell/quantum_lab/pulls?q=is%3Apr+reviewed-by%3AMaldoAlberto" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
