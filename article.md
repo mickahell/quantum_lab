@@ -21,11 +21,10 @@ For these reason it begins  complicated to set up a clear unique environment to 
 First to be able to run the lab, you need to install Docker[[6]](#6), that's the only requirement needed :
 - <details><summary>Linux</summary>
   <pre>apt-get install docker-ce docker-ce-cli containerd.io
-  Refer to https://docs.docker.com/engine/install/ubuntu/</pre>
-</details>
+  Refer to https://docs.docker.com/engine/install/ubuntu/</pre></details>
 
-- <details><summary>Mac / Windows</summary>
-  https://www.docker.com/products/docker-desktop
+- <details><summary>Mac / Windows</summary><pre>
+  https://www.docker.com/products/docker-desktop</pre>
 </details>
 
 ## 2. What is Docker <a class="anchor" id="docker"></a>
