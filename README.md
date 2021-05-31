@@ -37,7 +37,7 @@
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit.sh`
-    - Libs : ```qiskit, qiskit[visualization]```
+    - Libs : ```qiskit, qiskit[visualization], qiskit-nature```
   - `qsharp.sh`
     - Libs : ```qsharp, iqsharp```
   - `simulaqron.sh`
