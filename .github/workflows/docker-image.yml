@@ -52,3 +52,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker myQLM
       run: docker build --build-arg quantum_env=myqlm.sh . --file Dockerfile --tag quantum_lab_myqlm:main
+
+  build_cirq:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker Cirq
+      run: docker build --build-arg quantum_env=cirq.sh . --file Dockerfile --tag quantum_lab_cirq:main

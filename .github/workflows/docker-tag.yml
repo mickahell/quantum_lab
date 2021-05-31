@@ -80,3 +80,18 @@ jobs:
         docker tag mickahell/quantum_lab_myqlm:${RELEASE_VERSION} mickahell/quantum_lab_myqlm:latest
         docker login --username=mickahell --password=${DOCKERHUB_PASS}
         docker push mickahell/quantum_lab_myqlm --all-tags
+
+  build_cirq:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set env
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+    - name: Build cirq and push to Docker Hub
+      env:
+        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
+      run: |
+        docker build --build-arg quantum_env=cirq.sh . --file Dockerfile --tag mickahell/quantum_lab_cirq:${RELEASE_VERSION}
+        docker tag mickahell/quantum_lab_cirq:${RELEASE_VERSION} mickahell/quantum_lab_cirq:latest
+        docker login --username=mickahell --password=${DOCKERHUB_PASS}
+        docker push mickahell/quantum_lab_cirq --all-tags

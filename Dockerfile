@@ -7,6 +7,7 @@ ARG quantum_env
 #ARG quantum_env=qsharp.sh
 #ARG quantum_env=simulaqron.sh
 #ARG quantum_env=myqlm.sh
+#ARG quantum_env=cirq.sh
 
 # Var for labels
 ARG GITHUB_ACTOR
