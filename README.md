@@ -28,7 +28,7 @@
 
 ## Getting started
 - Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
-  - You can replace `qiskit.sh` with the following one `qml.sh`, `qsharp.sh`, `simulaqron.sh` or `myqlm.sh`
+  - You can replace `qiskit.sh` with the following one `qml.sh`, `qsharp.sh`, `simulaqron.sh`, `myqlm.sh` or `cirq.sh`
 - To create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
@@ -44,6 +44,8 @@
     - Libs : ```simulaqron```
   - `myqlm.sh`
     - Libs : ```myqlm, libmagickwand-dev, myqlm-interop[qiskit_binder]```
+  - `cirq.sh`
+    - Libs : ```cirq, cirq-core[contrib], texlive-latex-base, latexmk```
 
 ### Volume
 The folder `data/share` is link to the host file and allow to register the modification in the host computer
