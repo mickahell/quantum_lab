@@ -34,7 +34,7 @@
 
 ### Environment
 - Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
-- 4 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/), one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html) and one for [myQLM](https://atos.net/en/lp/myqlm)
+- 5 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/), one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html), one for [myQLM](https://atos.net/en/lp/myqlm) and one for [Cirq](https://quantumai.google/cirq).
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit.sh`
