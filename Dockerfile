@@ -38,7 +38,7 @@ RUN apt-get update -yq \
 
 # Add script & data
 ADD build/* /opt/quantum_lab/build/
-ADD data/* /opt/quantum_lab/data/
+ADD data/ /opt/quantum_lab/data/
 
 # General & env requirements
 RUN pip3 install --upgrade pip setuptools
