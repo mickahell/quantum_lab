@@ -28,6 +28,8 @@ LABEL org.opencontainers.image.title="Quantum Lab" \
       org.opencontainers.image.version=${GITHUB_REF}
       
 # OS requirements
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+
 RUN apt-get update -yq \
 && apt-get install python3.8 -y \
 && apt-get install python3-pip -y \
