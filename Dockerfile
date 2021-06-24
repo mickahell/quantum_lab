@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 # Choose your quantum env
 ARG quantum_env
@@ -24,16 +24,12 @@ LABEL org.opencontainers.image.title="Quantum Lab" \
       org.opencontainers.image.url="https://github.com/mickahell/quantum_lab/tags" \
       org.opencontainers.image.description="Docker image for quantum algorythm" \
       org.opencontainers.image.documentation="https://github.com/mickahell/quantum_lab/blob/main/README.md" \
-      org.opencontainers.image.os="Ubuntu Bionic" \
+      org.opencontainers.image.os="Ubuntu Focal" \
       org.opencontainers.image.version=${GITHUB_REF}
       
 # OS requirements
 RUN apt-get update -yq \
-&& apt-get install python3.8 -y
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1 \
-&& update-alternatives --set python3 /usr/bin/python3.8
-
-RUN apt-get install python3-pip -y \
+&& apt-get install python3-pip -y \
 && apt-get install python3-tk -y \
 && apt-get install vim -y \
 && apt-get install wget -y \
