@@ -24,7 +24,7 @@
 </details>
 
 ## Details
-- The image is base on Ubuntu [Bionic](https://doc.ubuntu-fr.org/bionic) (Will be updated to the next LTS)
+- The image is base on Ubuntu [Focal](https://doc.ubuntu-fr.org/focal)
 - Python version install : [3.8](https://www.python.org/downloads/release/python-383/)
 
 ## Getting started
