@@ -106,7 +106,7 @@ A live version is available directly in your browser for prototype, testing expe
 ### Environment details
 
 - Library's (libs) common for every env :  ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
-- 4 libs setup are available, one for installating Qiskit[[1]](#1), one for using Pannylane[[2]](#2), one for using Q#[[3]](#3), one for SimulaQron[[4]](#4), and one for myQLM[[5]](#5)
+- 4 libs setup are available, one for installating Qiskit[[1]](#1), one for using Pannylane[[2]](#2), one for using Q#[[3]](#3), one for SimulaQron[[4]](#4), another for myQLM[[5]](#5) and for Cirq[[7]](#7)
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit.sh`
@@ -117,6 +117,8 @@ A live version is available directly in your browser for prototype, testing expe
     - Libs : ```simulaqron```
   - `myqlm.sh`
     - Libs : ```myqlm, libmagickwand-dev, myqlm-interop[qiskit_binder]```
+  - `cirq.sh`
+    - Libs : ```cirq, cirq-core[contrib], texlive-latex-base, latexmk```
 
 All the libs setup scripts are available in the folder `/opt/quantum_lab/build` inside the image, some of the libs can live together and some cannot (ex. `qiskit` and `pennylane-qiskit` can't).
 
@@ -146,6 +148,7 @@ All the libs setup scripts are available in the folder `/opt/quantum_lab/build` 
 <a id="4">[4]</a> [Simulaqron](http://www.simulaqron.org/): A simulator for developing quantum internet software, 2018, [DOI: 10.1088/2058-9565/aad56e](https://doi.org/10.1088/2058-9565/aad56e)  
 <a id="5">[5]</a> [AQASM](https://atos.net/en/lp/myqlm): Atos Quantum Assembler, 2021, [DOI: arXiv:2102.12973](https://arxiv.org/abs/2102.12973)  
 <a id="6">[6]</a> [Docker](https://www.docker.com), An introduction to Docker for reproducible research, 2015, [DOI: 10.1145/2723872.2723882](https://doi.org/10.1145/2723872.2723882)
+<a id="7">[7]<a/> [Cirq](https://quantumai.google/cirq): An open source framework for programming quantum computers, 2018
 
 ## Author
 Michaël Rollin, [GitHub](https://github.com/mickahell), [Twitter](https://twitter.com/mickahell89700), [Linkedin](https://www.linkedin.com/in/michaelrollin/)  
