@@ -147,7 +147,7 @@ All the libs setup scripts are available in the folder `/opt/quantum_lab/build` 
 <a id="3">[3]</a> [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/): The Microsoft Quantum Development Kit Preview, 2017   
 <a id="4">[4]</a> [Simulaqron](http://www.simulaqron.org/): A simulator for developing quantum internet software, 2018, [DOI: 10.1088/2058-9565/aad56e](https://doi.org/10.1088/2058-9565/aad56e)  
 <a id="5">[5]</a> [AQASM](https://atos.net/en/lp/myqlm): Atos Quantum Assembler, 2021, [DOI: arXiv:2102.12973](https://arxiv.org/abs/2102.12973)  
-<a id="6">[6]</a> [Docker](https://www.docker.com), An introduction to Docker for reproducible research, 2015, [DOI: 10.1145/2723872.2723882](https://doi.org/10.1145/2723872.2723882)
+<a id="6">[6]</a> [Docker](https://www.docker.com), An introduction to Docker for reproducible research, 2015, [DOI: 10.1145/2723872.2723882](https://doi.org/10.1145/2723872.2723882)  
 <a id="7">[7]<a/> [Cirq](https://quantumai.google/cirq): An open source framework for programming quantum computers, 2018
 
 ## Author
