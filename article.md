@@ -14,8 +14,9 @@ For these reason it begins  complicated to set up a clear unique environment to 
 	3.2. [Create container](#container)  
 	3.3. [Run everything together](#run)
 4. [Future](#future)
-5. [Annexes](#annexes)
-6. [References](#ref)
+	4.1. [Live platform](#live)
+6. [Annexes](#annexes)
+7. [References](#ref)
 
 ## 1. Pre-requisites <a class="anchor" id="prereqisites"></a>
 First to be able to run the lab, you need to install Docker[[6]](#6), that's the only requirement needed :
@@ -52,7 +53,7 @@ First to be able to run the lab, you need to install Docker[[6]](#6), that's the
 ### 3.1. Build the image <a class="anchor" id="image"></a>
 First we need to build the image, we have to generate a docker image from our `Dockerfile` by using : 
 <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
-Feel free to replace `qiskit.sh` with `qml.sh`, `qsharp.sh`, `simulaqron.sh` or `myqlm.sh`. That'll set up a specialized environment for each library/language. This command can take several minutes, do not stop it until the command gave you the hand back.
+Feel free to replace `qiskit.sh` with `qml.sh`, `qsharp.sh`, `simulaqron.sh`, `myqlm.sh` or `cirq.sh`. That'll set up a specialized environment for each library/language. This command can take several minutes, do not stop it until the command gave you the hand back.
 
 #### Pre-build images
 Pre-build images for each environment are available in the [Docker Hub](https://hub.docker.com/search?q=mickahell%2Fquantum&type=image) :
@@ -61,6 +62,7 @@ Pre-build images for each environment are available in the [Docker Hub](https://
 - `quantum_lab_qsharp`
 - `quantum_lab_simulaqron`
 - `quantum_lab_myqlm`
+- `quantum_lab_cirq`
 
 You can download them by using : `docker pull mickahell/[IMAGE_NAME]` (ex. `quantum_lab_qiskit`)  
 To not have any problem with the following tutorial I suggest you to rename the image as `quantum_lab` by using : <pre>docker image tag mickahell/[IMAGE_NAME]:latest quantum_lab:latest</pre>
@@ -96,6 +98,9 @@ The goal is to make everything possible to keep the image as simple as possible 
 Also, the experiences part will be externalized in another GitHub repository and download automatically in the build phase, in order to keep the Docker image clean without too much _random_ data.
 
 If you have an idea of features do not hesitate and create an **[issue](https://github.com/mickahell/quantum_lab/issues/new)**.
+
+## 4.1. Live platform <a class="anchor" id="live"></a>
+A live version is available directly in your browser for prototype, testing experiments and science vulgarisation/demo. Also presenting how to use the image to create Quantum application to deploy everywhere --> https://quantum-lab.xtraorbitals.xyz
 
 ## 5. Annexes <a class="anchor" id="annexes"></a>
 ### Environment details
