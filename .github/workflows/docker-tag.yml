@@ -7,7 +7,7 @@ on:
 jobs:
 
   build_qiskit:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
     - name: Set env
@@ -16,13 +16,28 @@ jobs:
       env:
         DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
       run: |
-        docker build --build-arg quantum_env=qiskit.sh . --file Dockerfile --tag mickahell/quantum_lab_qiskit:${RELEASE_VERSION}
+        docker build --build-arg quantum_env=qiskit-light.sh . --file Dockerfile --tag mickahell/quantum_lab_qiskit:${RELEASE_VERSION}
         docker tag mickahell/quantum_lab_qiskit:${RELEASE_VERSION} mickahell/quantum_lab_qiskit:latest
         docker login --username=mickahell --password=${DOCKERHUB_PASS}
         docker push mickahell/quantum_lab_qiskit --all-tags
 
+  build_qiskit-full:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set env
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+    - name: Build qiskit-full and push to Docker Hub
+      env:
+        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
+      run: |
+        docker build --build-arg quantum_env=qiskit-full.sh . --file Dockerfile --tag mickahell/quantum_lab_qiskit-full:${RELEASE_VERSION}
+        docker tag mickahell/quantum_lab_qiskit-full:${RELEASE_VERSION} mickahell/quantum_lab_qiskit-full:latest
+        docker login --username=mickahell --password=${DOCKERHUB_PASS}
+        docker push mickahell/quantum_lab_qiskit-full --all-tags
+
   build_qml:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
     - name: Set env
@@ -36,38 +51,38 @@ jobs:
         docker login --username=mickahell --password=${DOCKERHUB_PASS}
         docker push mickahell/quantum_lab_qml --all-tags
 
-  build_qsharp:
-    runs-on: ubuntu-18.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set env
-      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-    - name: Build Q# and push to Docker Hub
-      env:
-        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
-      run: |
-        docker build --build-arg quantum_env=qsharp.sh . --file Dockerfile --tag mickahell/quantum_lab_qsharp:${RELEASE_VERSION}
-        docker tag mickahell/quantum_lab_qsharp:${RELEASE_VERSION} mickahell/quantum_lab_qsharp:latest
-        docker login --username=mickahell --password=${DOCKERHUB_PASS}
-        docker push mickahell/quantum_lab_qsharp --all-tags
+#  build_qsharp:
+#    runs-on: ubuntu-22.04
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: Set env
+#      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+#    - name: Build Q# and push to Docker Hub
+#      env:
+#        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
+#      run: |
+#        docker build --build-arg quantum_env=qsharp.sh . --file Dockerfile --tag mickahell/quantum_lab_qsharp:${RELEASE_VERSION}
+#        docker tag mickahell/quantum_lab_qsharp:${RELEASE_VERSION} mickahell/quantum_lab_qsharp:latest
+#        docker login --username=mickahell --password=${DOCKERHUB_PASS}
+#        docker push mickahell/quantum_lab_qsharp --all-tags
 
-  build_simulaqron:
-    runs-on: ubuntu-18.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set env
-      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-    - name: Build SimulaQron and push to Docker Hub
-      env:
-        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
-      run: |
-        docker build --build-arg quantum_env=simulaqron.sh . --file Dockerfile --tag mickahell/quantum_lab_simulaqron:${RELEASE_VERSION}
-        docker tag mickahell/quantum_lab_simulaqron:${RELEASE_VERSION} mickahell/quantum_lab_simulaqron:latest
-        docker login --username=mickahell --password=${DOCKERHUB_PASS}
-        docker push mickahell/quantum_lab_simulaqron --all-tags
+#  build_simulaqron:
+#    runs-on: ubuntu-22.04
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: Set env
+#      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+#    - name: Build SimulaQron and push to Docker Hub
+#      env:
+#        DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
+#      run: |
+#        docker build --build-arg quantum_env=simulaqron.sh . --file Dockerfile --tag mickahell/quantum_lab_simulaqron:${RELEASE_VERSION}
+#        docker tag mickahell/quantum_lab_simulaqron:${RELEASE_VERSION} mickahell/quantum_lab_simulaqron:latest
+#        docker login --username=mickahell --password=${DOCKERHUB_PASS}
+#        docker push mickahell/quantum_lab_simulaqron --all-tags
 
   build_myqlm:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
     - name: Set env
@@ -82,7 +97,7 @@ jobs:
         docker push mickahell/quantum_lab_myqlm --all-tags
 
   build_cirq:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
     - name: Set env

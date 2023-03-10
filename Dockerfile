@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 # Choose your quantum env
 ARG quantum_env
-#ARG quantum_env=qiskit.sh
+#ARG quantum_env=qiskit-light.sh
 #ARG quantum_env=qml.sh
 #ARG quantum_env=qsharp.sh
 #ARG quantum_env=simulaqron.sh

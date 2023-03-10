@@ -28,8 +28,8 @@
 - Python version install : [3.10](https://www.python.org/downloads/release/python-3104/)
 
 ## Getting started
-- Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
-  - You can replace `qiskit.sh` with the following one `qml.sh`, `qsharp.sh`, `simulaqron.sh`, `myqlm.sh` or `cirq.sh`
+- Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit-light.sh -t quantum_lab .</pre>
+  - You can replace `qiskit-light.sh` with the following one `qiskit-full.sh`, `qml.sh`, `qsharp.sh`, `simulaqron.sh`, `myqlm.sh` or `cirq.sh`
 - To create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
@@ -37,8 +37,10 @@
 - 6 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/), one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html), one for [myQLM](https://atos.net/en/lp/myqlm) and one for [Cirq](https://quantumai.google/cirq).
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
-  - `qiskit.sh`
-    - Libs : ```qiskit, qiskit[visualization], qiskit-nature```
+  - `qiskit-light.sh`
+    - Libs : ```qiskit, qiskit[visualization]```
+  - `qiskit-full.sh`
+    - Libs : ```qiskit, qiskit[visualization], qiskit[nature], qiskit[finance], qiskit[optimization], qiskit[machine-learning]```
   - `qsharp.sh`
     - Libs : ```qsharp, iqsharp```
   - `simulaqron.sh`
