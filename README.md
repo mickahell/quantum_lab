@@ -28,8 +28,8 @@
 - Python version install : [3.10](https://www.python.org/downloads/release/python-3104/)
 
 ## Getting started
-- Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
-  - You can replace `qiskit.sh` with the following one `qml.sh`, `qsharp.sh`, `simulaqron.sh`, `myqlm.sh` or `cirq.sh`
+- Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit-light.sh -t quantum_lab .</pre>
+  - You can replace `qiskit-light.sh` with the following one `qiskit-full.sh`, `qml.sh`, `qsharp.sh`, `simulaqron.sh`, `myqlm.sh` or `cirq.sh`
 - To create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
