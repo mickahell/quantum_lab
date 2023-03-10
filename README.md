@@ -24,8 +24,8 @@
 </details>
 
 ## Details
-- The image is base on Ubuntu [Focal](https://doc.ubuntu-fr.org/focal)
-- Python version install : [3.8](https://www.python.org/downloads/release/python-383/)
+- The image is base on Ubuntu [The Jammy Jellyfish](https://doc.ubuntu-fr.org/jammy)
+- Python version install : [3.10](https://www.python.org/downloads/release/python-3104/)
 
 ## Getting started
 - Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit.sh -t quantum_lab .</pre>
