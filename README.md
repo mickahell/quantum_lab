@@ -37,8 +37,10 @@
 - 6 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/), one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html), one for [myQLM](https://atos.net/en/lp/myqlm) and one for [Cirq](https://quantumai.google/cirq).
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
-  - `qiskit.sh`
-    - Libs : ```qiskit, qiskit[visualization], qiskit-nature```
+  - `qiskit-light.sh`
+    - Libs : ```qiskit, qiskit[visualization]```
+  - `qiskit-full.sh`
+    - Libs : ```qiskit, qiskit[visualization], qiskit[nature], qiskit[finance], qiskit[optimization], qiskit[machine-learning]```
   - `qsharp.sh`
     - Libs : ```qsharp, iqsharp```
   - `simulaqron.sh`
