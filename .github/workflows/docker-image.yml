@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build_qiskit-light:
+  build_qiskit:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
