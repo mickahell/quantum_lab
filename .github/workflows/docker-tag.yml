@@ -1,6 +1,7 @@
 name: Docker TAG CI
 
 on:
+  workflow_dispatch:
   push:
     tags:        
       - '*'
