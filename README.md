@@ -39,9 +39,9 @@
   - `qml.sh`
     - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
   - `qiskit-light.sh`
-    - Libs : ```qiskit, qiskit[visualization]```
+    - Libs : ```qiskit, qiskit-aer, qiskit[visualization]```
   - `qiskit-full.sh`
-    - Libs : ```qiskit, qiskit[visualization], qiskit[nature], qiskit[finance], qiskit[optimization], qiskit[machine-learning]```
+    - Libs : ```qiskit, qiskit-aer, qiskit[visualization], qiskit-nature, qiskit-finance, qiskit-optimization, qiskit-machine-learning```
   - `qsharp.sh`
     - Libs : ```qsharp, iqsharp```
   - `simulaqron.sh`
