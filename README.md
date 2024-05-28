@@ -8,6 +8,8 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mickahell/quantum_lab)](https://github.com/mickahell/quantum_lab/releases)
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qiskit?label=Quantum%20Lab%20Qiskit&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qiskit)
+
+__Those image are now depreciated, please use the Qiskit one just above.__
 [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qiskit-full?label=Quantum%20Lab%20Qiskit-full&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qiskit-full)
 [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qml?label=Quantum%20Lab%20QML&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qsharp?label=Quantum%20Lab%20Q%23&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qsharp)
@@ -34,22 +36,7 @@
 - To create a new containeur and go inside, run the script : `./start.sh`
 
 ### Environment
-- Libs common for every env : ```networkx, numpy, matplotlib, notebook, pandas, scipy, tk, vim```
-- 6 libs setup are available, one for installating [PennyLane](https://pennylane.ai), one for using [Qiskit](https://qiskit.org), one for using [Q#](https://azure.microsoft.com/fr-fr/resources/development-kit/quantum-computing/), one for [SimulaQron](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html), one for [myQLM](https://atos.net/en/lp/myqlm) and one for [Cirq](https://quantumai.google/cirq).
-  - `qml.sh`
-    - Libs : ```autograd, pennylane, pennylane-sf, pennylane-qiskit```
-  - `qiskit-light.sh`
-    - Libs : ```qiskit, qiskit-aer, qiskit[visualization]```
-  - `qiskit-full.sh`
-    - Libs : ```qiskit, qiskit-aer, qiskit[visualization], qiskit-nature, qiskit-finance, qiskit-optimization, qiskit-machine-learning```
-  - `qsharp.sh`
-    - Libs : ```qsharp, iqsharp```
-  - `simulaqron.sh`
-    - Libs : ```simulaqron```
-  - `myqlm.sh`
-    - Libs : ```myqlm, libmagickwand-dev, myqlm-interop[qiskit_binder]```
-  - `cirq.sh`
-    - Libs : ```cirq, cirq-core[contrib], texlive-latex-base, latexmk```
+The env is based on the image [qat-computer](https://github.com/mickahell/qat-computer).
 
 ### Volume
 The folder `data/share` is link to the host file and allow to register the modification in the host computer

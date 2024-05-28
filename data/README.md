@@ -5,15 +5,6 @@
 ## Sharing file
 - File sync with your host computer
 
-## Program example
-- Some example of program for each environment are available here :
-  - `qiskit`
-  - `qml`(Pennylane)
-  - `Q#`
-  - `SimulaQron`
-
-Every code examples are running simply by taping : `python3 script.py` or `./script.sh`
-
 ## Jupyter
 - To start the jupyter server, run the script `./start_jupyter.sh`
 - Then go to your host browser and tape `http://127.0.0.1:8888/`
