@@ -1,13 +1,4 @@
-FROM ubuntu:22.04
-
-# Choose your quantum env
-ARG quantum_env
-#ARG quantum_env=qiskit-light.sh
-#ARG quantum_env=qml.sh
-#ARG quantum_env=qsharp.sh
-#ARG quantum_env=simulaqron.sh
-#ARG quantum_env=myqlm.sh
-#ARG quantum_env=cirq.sh
+FROM mickahell/qatcomputer-full:latest
 
 # Var for labels
 ARG GITHUB_ACTOR
@@ -29,22 +20,22 @@ LABEL org.opencontainers.image.title="Quantum Lab" \
       
 # OS requirements
 RUN apt-get update -yq \
-&& apt-get install python3-pip -y \
-&& apt-get install python3-tk -y \
-&& apt-get install vim -y \
-&& apt-get install wget -y \
-&& apt-get clean -y
+&& apt-get install python3-tk -yq \
+&& apt-get dist-upgrade -yq \
+&& apt-get clean -yq
 
 # Add script & data
 ADD build/* /opt/quantum_lab/build/
 ADD data/ /opt/quantum_lab/data/
+ADD start_jupyter.sh /opt/quantum_lab/
 
 # General & env requirements
-RUN pip3 install --upgrade pip setuptools
-RUN pip3 install -r /opt/quantum_lab/build/requirements.txt
-RUN /opt/quantum_lab/build/${quantum_env}
+RUN pip install --upgrade pip setuptools
+RUN pip install -r /opt/quantum_lab/build/requirements.txt
 
 WORKDIR /opt/quantum_lab/data
 VOLUME /opt/quantum_lab/data/share
+
+EXPOSE 8888
 
 CMD /bin/bash

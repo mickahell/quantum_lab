@@ -12,47 +12,5 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker qiskit-light
-      run: docker build --build-arg quantum_env=qiskit-light.sh . --file Dockerfile --tag quantum_lab_qiskit:main
-
-  build_qiskit-full:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker qiskit-light
-      run: docker build --build-arg quantum_env=qiskit-full.sh . --file Dockerfile --tag quantum_lab_qiskit-full:main
-
-  build_qml:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker qml
-      run: docker build --build-arg quantum_env=qml.sh . --file Dockerfile --tag quantum_lab_qml:main
-
-#  build_qsharp:
-#    runs-on: ubuntu-22.04
-#    steps:
-#    - uses: actions/checkout@v2
-#    - name: Build the Docker Q#
-#      run: docker build --build-arg quantum_env=qsharp.sh . --file Dockerfile --tag quantum_lab_qsharp:main
-
-#  build_simulaqron:
-#    runs-on: ubuntu-22.04
-#    steps:
-#    - uses: actions/checkout@v2
-#    - name: Build the Docker SimulaQron
-#      run: docker build --build-arg quantum_env=simulaqron.sh . --file Dockerfile --tag quantum_lab_simulaqron:main
-
-  build_myqlm:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker myQLM
-      run: docker build --build-arg quantum_env=myqlm.sh . --file Dockerfile --tag quantum_lab_myqlm:main
-
-  build_cirq:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker Cirq
-      run: docker build --build-arg quantum_env=cirq.sh . --file Dockerfile --tag quantum_lab_cirq:main
+    - name: Build the Docker qiskit
+      run: docker build . --file Dockerfile --tag quantum_lab_qiskit:main

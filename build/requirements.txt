@@ -1,6 +1,3 @@
-networkx
-numpy
 matplotlib
 notebook
-pandas
-scipy
+purplecaffeine
