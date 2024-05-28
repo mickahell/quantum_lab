@@ -9,13 +9,17 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qiskit?label=Quantum%20Lab%20Qiskit&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qiskit)
 
-__Those image are now depreciated, please use the Qiskit one just above.__
-[![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qiskit-full?label=Quantum%20Lab%20Qiskit-full&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qiskit-full)
-[![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qml?label=Quantum%20Lab%20QML&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qsharp?label=Quantum%20Lab%20Q%23&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qsharp)
-[![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_myqlm?label=Quantum%20Lab%20myQLM&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_myqlm)
-[![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_simulaqron?label=Quantum%20Lab%20SimulaQron&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_simulaqron)
-[![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_cirq?label=Quantum%20Lab%20Cirq&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_cirq)
+__The next images are now depreciated, please use the Qiskit one just above.__
+- <details><summary>Old images</summary>
+
+  [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qiskit-full?label=Quantum%20Lab%20Qiskit-full&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qiskit-full)
+  [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qml?label=Quantum%20Lab%20QML&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qml)
+  [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_qsharp?label=Quantum%20Lab%20Q%23&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_qsharp)
+  [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_myqlm?label=Quantum%20Lab%20myQLM&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_myqlm)
+  [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_simulaqron?label=Quantum%20Lab%20SimulaQron&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_simulaqron)
+  [![Docker Pulls](https://img.shields.io/docker/pulls/mickahell/quantum_lab_cirq?label=Quantum%20Lab%20Cirq&style=for-the-badge)](https://hub.docker.com/r/mickahell/quantum_lab_cirq)
+
+</details>
 
 ## Prerequisites
 - <details><summary>Linux</summary>
@@ -27,42 +31,28 @@ __Those image are now depreciated, please use the Qiskit one just above.__
 </details>
 
 ## Details
-- The image is base on Ubuntu [The Jammy Jellyfish](https://doc.ubuntu-fr.org/jammy)
-- Python version install : [3.10](https://www.python.org/downloads/release/python-3104/)
+- The image is based on [qat-computer](https://github.com/mickahell/qat-computer).
 
 ## Getting started
-- Build the image, run the following command line : <pre>docker build --build-arg quantum_env=qiskit-light.sh -t quantum_lab .</pre>
-  - You can replace `qiskit-light.sh` with the following one `qiskit-full.sh`, `qml.sh`, `qsharp.sh`, `simulaqron.sh`, `myqlm.sh` or `cirq.sh`
-- To create a new containeur and go inside, run the script : `./start.sh`
-
-### Environment
-The env is based on the image [qat-computer](https://github.com/mickahell/qat-computer).
-
-### Volume
-The folder `data/share` is link to the host file and allow to register the modification in the host computer
-
-### How to
-
 #### Build
 
 ```bash
-docker build . --file Dockerfile --tag quantum_lab_qiskit:main
+docker build . --file Dockerfile --tag quantum_lab_qiskit
 ```
 
 #### Run
 
 ```bash
 docker run -d --name qiskit_lab \
-  -v $PWD/YOUR_DATA_FOLDER:/opt/quantum_lab/data/share
+  -v $PWD/YOUR_DATA_FOLDER:/opt/quantum_lab/data/share \
   -p 8888:8888 \
-  mickahell/quantum_lab_qiskit:latest -c "/opt/quantum_lab/start_jupyter.sh"
+  mickahell/quantum_lab_qiskit:latest /opt/quantum_lab/start_jupyter.sh
 ```
+- copy and paste this url in your browser : `http://127.0.0.1:8888/` to open the jupyter interface.
+- everyfile in the share folder gonna be sync with your local volume.
 
-### Jupyter
-To launch the Jupyter notebook instance :
-- be inside the `data`folder
-- run : `./start_jupyter.sh`
-- copy and paste this url in your browser : `http://127.0.0.1:8888/`
+### Volume
+The folder `data/share` is link to the host file and allow to register the modification in the host computer
 
 ## Simple docker commands
 - List the existed images : `docker images`
