@@ -41,6 +41,23 @@ The env is based on the image [qat-computer](https://github.com/mickahell/qat-co
 ### Volume
 The folder `data/share` is link to the host file and allow to register the modification in the host computer
 
+### How to
+
+#### Build
+
+```bash
+docker build . --file Dockerfile --tag quantum_lab_qiskit:main
+```
+
+#### Run
+
+```bash
+docker run -d --name qiskit_lab \
+  -v $PWD/YOUR_DATA_FOLDER:/opt/quantum_lab/data/share
+  -p 8888:8888 \
+  mickahell/quantum_lab_qiskit:latest -c "/opt/quantum_lab/start_jupyter.sh"
+```
+
 ### Jupyter
 To launch the Jupyter notebook instance :
 - be inside the `data`folder

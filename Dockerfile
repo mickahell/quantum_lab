@@ -27,6 +27,7 @@ RUN apt-get update -yq \
 # Add script & data
 ADD build/* /opt/quantum_lab/build/
 ADD data/ /opt/quantum_lab/data/
+ADD start_jupyter.sh /opt/quantum_lab/
 
 # General & env requirements
 RUN pip install --upgrade pip setuptools
@@ -34,5 +35,7 @@ RUN pip install -r /opt/quantum_lab/build/requirements.txt
 
 WORKDIR /opt/quantum_lab/data
 VOLUME /opt/quantum_lab/data/share
+
+EXPOSE 8888
 
 CMD /bin/bash
