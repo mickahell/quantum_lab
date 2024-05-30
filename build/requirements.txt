@@ -1,3 +1,9 @@
 matplotlib
+pylatexenc
 notebook
 purplecaffeine
+prototype-zne
+qiskit==1.0.2
+qiskit[visualization]
+qiskit_aer==0.14.1
+qiskit_ibm_runtime==0.23.0
