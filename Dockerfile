@@ -20,7 +20,10 @@ LABEL org.opencontainers.image.title="Quantum Lab" \
       
 # OS requirements
 RUN apt-get update -yq \
-&& apt-get install python3-tk git -yq \
+&& apt-get install -yq \
+      python3-tk \
+      graphviz \
+      git \
 && apt-get dist-upgrade -yq \
 && apt-get clean -yq
 
